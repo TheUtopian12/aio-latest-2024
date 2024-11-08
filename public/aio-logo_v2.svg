@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="35mm"
+   height="35mm"
+   viewBox="0 0 35 35"
+   version="1.1"
+   id="svg12602"
+   sodipodi:docname="aio-logo_v2.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/media/arturo/arturo/projects/aio/aio.png"
+   inkscape:export-xdpi="371.56573"
+   inkscape:export-ydpi="371.56573"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12604"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.9790123"
+     inkscape:cx="79.556569"
+     inkscape:cy="47.498964"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="1920"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs12599" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g12577"
+       transform="translate(-117.66793,-61.935739)">
+      <path
+         style="fill:#ff6f59;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 135.78985,67.397388 h 13.12273 v 24.0767 h -7.49414 V 73.446431 h -1.30066 z"
+         id="path11275"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         style="fill:#e2e8dd;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 121.42328,91.441922 h 18.6781 v -6.107408 h -5.17047 l 5.32134,-6.837223 V 74.88775 h -0.79274 l -3.11884,-4.43484 z"
+         id="path11277" />
+    </g>
+  </g>
+</svg>
