@@ -16,7 +16,6 @@ const BannerComponentDetails = ({
   title,
   vote_average,
   release_date,
-  genres,
   overview,
 }: BannerComponentProps) => {
   const [isPlaying, setIsPlaying] = useState(false); // Estado para controlar la reproducción
@@ -106,7 +105,7 @@ const BannerComponentDetails = ({
       <div className="absolute top-10 left-5 pt-10 px-10 space-x-4 text-center sm:text-left">
         <button className="btn btn-error" onClick={() => router.back()}>
           {" "}
-          <FaArrowLeft />{" "}
+          <FaArrowLeft className="hover:text-red-500" size={28} color="white" />{" "}
         </button>
       </div>
     </div>

@@ -7,7 +7,7 @@ const Login = () => {
   const [valid, setValid] = useState(false)
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const value = e.target[0].value;
+    const value = (e.target as HTMLInputElement).value;
 
     if (value === "1234") {
       window.location.href = "/main";
