@@ -45,13 +45,13 @@ export default function GridMovies({
         href={"/main"}
         className="flex items-center pt-10 px-10 space-x-4 text-center sm:text-left"
       >
-        <button className="btn btn-error">
-          {" "}
-          <FaArrowLeft />{" "}
+        <button className="text-white">
+
+          <FaArrowLeft className="hover:text-red-500" size={28} />{" "}
         </button>
       </Link>
       <div
-        className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 whitespace-nowrap 
+        className="px-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 whitespace-nowrap 
                     overflow-x-scroll no-scrollbar md:gap-9 lg:gap-10 justify-items-center
                     
                     

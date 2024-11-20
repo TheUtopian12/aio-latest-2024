@@ -4,12 +4,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const Login = () => {
-  const [login, setLogin] = useState("")
   const [valid, setValid] = useState(false)
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const value = e.target[0].value;
-    setLogin(value);
+
     if (value === "1234") {
       window.location.href = "/main";
     } else {
