@@ -1,3 +1,4 @@
+import MainNav from "@/components/ui/MainNav";
 import NavBar from "@/components/ui/NavBar";
 import type { Metadata } from "next";
 
@@ -13,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <div>
+      <MainNav />
       <NavBar />
       {children}
     </div>

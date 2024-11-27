@@ -1,21 +1,20 @@
-"use client"
+"use client";
 import { Button, Input } from "@nextui-org/react";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const Login = () => {
-  const [valid, setValid] = useState(false)
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const [valid, setValid] = useState(false);
+  const [digit, setDigit] = useState("");
+  const handleLogin = (e: any) => {
     e.preventDefault();
-    const value = (e.target as HTMLInputElement).value;
-
-    if (value === "1234") {
+    console.log(digit);
+    if (digit === "1234") {
       window.location.href = "/main";
     } else {
       setValid(true);
     }
-  }
-
+  };
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-black">
@@ -36,12 +35,15 @@ const Login = () => {
             label="EX: 1234"
             isInvalid={valid}
             errorMessage={"Invalid Digit"}
+            value={digit}
+            onChange={(e) => setDigit(e.target.value)}
             className="max-w-xs text-white text-center"
           />
           <Button
             radius="lg"
             size="lg"
             type="submit"
+            onClick={handleLogin}
             className="bg-[#F26457] text-white shadow-lg font-semibold"
           >
             Log In
