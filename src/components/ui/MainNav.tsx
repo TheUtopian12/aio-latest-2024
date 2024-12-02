@@ -16,18 +16,7 @@ import Image from "next/image";
 export default function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const menuItems = ["Profile", "My Settings", "Help", "Log Out"];
 
   return (
     <Navbar className="bg-black" onMenuOpenChange={setIsMenuOpen}>
@@ -48,20 +37,20 @@ export default function MainNav() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
-          <Link color="secondary" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
+          <Link color="danger" href="#">
+            Profile
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="secondary" href="#">
-            Integrations
+          <Link color="danger" href="#" aria-current="page">
+            My Settings
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="danger" href="#">
+            Help
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -69,11 +58,6 @@ export default function MainNav() {
         <NavbarItem className="hidden lg:flex">
           <Button as={Link} color="danger" href="#" variant="ghost">
             Logout
-          </Button>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="success" href="#" variant="ghost">
-            Profile
           </Button>
         </NavbarItem>
       </NavbarContent>

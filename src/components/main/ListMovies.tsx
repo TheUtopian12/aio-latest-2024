@@ -5,8 +5,14 @@ import { getPopularMovies } from "@/lib/api";
 import { CardMovie } from "./CardMovie";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function MovieList() {
+  const screenWidth = window.screen.width;
   const [movies, setMovies] = useState([]); // Estado inicial vacío
 
   const fetchMovies = async () => {
@@ -45,19 +51,31 @@ export default function MovieList() {
         className="flex whitespace-nowrap
                     overflow-x-scroll no-scrollbar gap-9"
       >
-        {movies.slice(0, 10).map(
-          (movie: {
-            id: string;
-            original_title: string;
-            overview: string;
-            vote_average: number;
-            release_date: string;
+        <Swiper
+          slidesPerView={screenWidth > 600 ? 6 : 1}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {movies.slice(0, 10).map(
+            (movie: {
+              id: string;
+              original_title: string;
+              overview: string;
+              vote_average: number;
+              release_date: string;
 
-            poster_path: string;
-          }) => (
-            <CardMovie key={movie.id} movie={movie} />
-          ),
-        )}
+              poster_path: string;
+            }) => (
+              <SwiperSlide>
+                <CardMovie key={movie.id} movie={movie} />
+              </SwiperSlide>
+            )
+          )}
+        </Swiper>
       </div>
     </div>
   );
