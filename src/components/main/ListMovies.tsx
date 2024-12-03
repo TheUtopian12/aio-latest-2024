@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function MovieList() {
-  const screenWidth = window.screen.width;
+  const [width, setWidth] = useState<number>(300);
   const [movies, setMovies] = useState([]); // Estado inicial vacío
 
   const fetchMovies = async () => {
@@ -27,6 +27,8 @@ export default function MovieList() {
   // Llama a fetchMovies una vez cuando el componente se monta
   useEffect(() => {
     fetchMovies();
+
+    setWidth(window.screen.width);
   }, []);
 
   // Nuevo useEffect para observar los cambios en `movies`
@@ -52,7 +54,7 @@ export default function MovieList() {
                     overflow-x-scroll no-scrollbar gap-9"
       >
         <Swiper
-          slidesPerView={screenWidth > 600 ? 6 : 1}
+          slidesPerView={width > 600 ? 6 : 1}
           spaceBetween={30}
           pagination={{
             clickable: true,
