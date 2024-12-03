@@ -1,4 +1,4 @@
-const API_KEY = "ad294590a5a13eede7fbfb2af9d995bc";
+
 export default {
   fetchTrending: {
     title: "Trending",

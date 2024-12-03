@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const Login = () => {
   const [valid, setValid] = useState(false);
   const [digit, setDigit] = useState("");
-  const handleLogin = (e: any) => {
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(digit);
     if (digit === "1234") {
@@ -43,7 +43,7 @@ const Login = () => {
             radius="lg"
             size="lg"
             type="submit"
-            onClick={handleLogin}
+            onClick={(e) => handleLogin}
             className="bg-[#F26457] text-white shadow-lg font-semibold"
           >
             Log In

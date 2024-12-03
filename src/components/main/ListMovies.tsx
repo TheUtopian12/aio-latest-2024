@@ -70,7 +70,7 @@ export default function MovieList() {
 
               poster_path: string;
             }) => (
-              <SwiperSlide>
+              <SwiperSlide key={movie.id}>
                 <CardMovie key={movie.id} movie={movie} />
               </SwiperSlide>
             )

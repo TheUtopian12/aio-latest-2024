@@ -35,7 +35,7 @@ export default function GridMovies({
   // Llama a fetchMovies una vez cuando el componente se monta
   useEffect(() => {
     fetchMovies();
-  }, []);
+  });
 
   // Se ejecuta cuando cambia el valor de `movies`
 
@@ -46,7 +46,6 @@ export default function GridMovies({
         className="flex items-center pt-10 px-10 space-x-4 text-center sm:text-left"
       >
         <button className="text-white">
-
           <FaArrowLeft className="hover:text-red-500" size={28} />{" "}
         </button>
       </Link>
@@ -64,7 +63,7 @@ export default function GridMovies({
             poster_path: string;
           }) => (
             <CardMovie key={movie.id} movie={movie} />
-          ),
+          )
         )}
       </div>
     </div>

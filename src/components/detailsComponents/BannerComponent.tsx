@@ -29,7 +29,7 @@ const BannerComponent = ({ mediaId }: { mediaId: string }) => {
     };
 
     fetchMovieData();
-  }, []);
+  });
   return (
     <>
       {movieData ? (
