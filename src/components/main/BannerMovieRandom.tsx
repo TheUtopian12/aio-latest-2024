@@ -10,6 +10,7 @@ interface Movie {
   poster: string;
   original_title: string;
   poster_path: string;
+  backdrop_path: string;
   release_date: string;
   first_air_date: string;
   original_name: string;
@@ -37,7 +38,7 @@ const BannerMovieRandom = ({ movies }: { movies: Movie[] }) => {
       {movieList[0] ? (
         <div className="flex relative items-center justify-center transition-all">
           <Image
-            src={`https://image.tmdb.org/t/p/original${movieList[currentIndex]?.poster_path}`}
+            src={`https://image.tmdb.org/t/p/original${movieList[currentIndex]?.backdrop_path}`}
             width={9000}
             height={9000}
             quality={100}

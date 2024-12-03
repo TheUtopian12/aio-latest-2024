@@ -26,14 +26,16 @@ export default function MainNav() {
           className="sm:hidden text-white"
         />
         <NavbarBrand>
-          <Image
-            src={"/aio-logo_v2.svg"}
-            className="w-16 h-16"
-            alt="Logo"
-            width={500}
-            height={500}
-          />
-          <p className="font-bold text-inherit text-white">AIO</p>
+          <Link href="/main">
+            <Image
+              src={"/aio-logo_v2.svg"}
+              className="w-16 h-16"
+              alt="Logo"
+              width={500}
+              height={500}
+            />
+            <p className="font-bold text-inherit text-white">AIO</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -56,7 +58,7 @@ export default function MainNav() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Button as={Link} color="danger" href="#" variant="ghost">
+          <Button as={Link} color="danger" href="/home" variant="ghost">
             Logout
           </Button>
         </NavbarItem>

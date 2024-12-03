@@ -10,6 +10,7 @@ interface PropsMovie {
   title: string;
   poster_path: string;
   vote_average: number;
+  backdrop_path: string;
   release_date: string;
   overview: string;
   genres: string[];
@@ -37,7 +38,7 @@ const BannerComponent = ({ mediaId }: { mediaId: string }) => {
           title={movieData.title}
           genres={movieData.genres}
           overview={movieData.overview}
-          poster_path={movieData.poster_path}
+          poster_path={movieData.backdrop_path}
           release_date={movieData.release_date}
           vote_average={movieData.vote_average}
         />
